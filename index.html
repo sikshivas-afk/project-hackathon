@@ -1,0 +1,81 @@
+
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Secure Steganography Engine</title>
+    <script src="https://cdn.tailwindcss.com"></script>
+    <link href="https://fonts.googleapis.com/css2?family=Space+Grotesk:wght@300;400;500;600;700&family=JetBrains+Mono:wght@400;700&display=swap" rel="stylesheet">
+    <style>
+      :root {
+        --theme-primary: #22c55e;
+        --theme-primary-glow: rgba(34, 197, 94, 0.2);
+        --theme-primary-text-glow: rgba(34, 197, 94, 0.6);
+      }
+
+      .theme-decode {
+        --theme-primary: #0ea5e9;
+        --theme-primary-glow: rgba(14, 165, 233, 0.2);
+        --theme-primary-text-glow: rgba(14, 165, 233, 0.6);
+      }
+
+      body {
+        font-family: 'Space Grotesk', sans-serif;
+        background-color: #020617;
+        color: #f8fafc;
+        cursor: crosshair;
+        overflow-x: hidden;
+      }
+      .mono {
+        font-family: 'JetBrains Mono', monospace;
+      }
+      .gradient-bg {
+        background: radial-gradient(circle at 50% 50%, #052e16 0%, #020617 100%);
+        transition: background 0.8s ease-in-out;
+      }
+      .theme-decode.gradient-bg {
+        background: radial-gradient(circle at 50% 50%, #082f49 0%, #020617 100%);
+      }
+      .glass {
+        background: rgba(15, 23, 42, 0.4);
+        backdrop-filter: blur(12px);
+        border: 1px solid var(--theme-primary-glow);
+        transition: border-color 0.5s ease;
+      }
+      .glow-primary {
+        box-shadow: 0 0 30px var(--theme-primary-glow);
+        transition: box-shadow 0.5s ease;
+      }
+      .text-primary-glow {
+        text-shadow: 0 0 10px var(--theme-primary-text-glow);
+        transition: text-shadow 0.5s ease;
+      }
+      .shield-shape {
+        clip-path: polygon(0% 0%, 100% 0%, 100% 75%, 50% 100%, 0% 75%);
+      }
+      
+      /* Custom Scrollbar */
+      ::-webkit-scrollbar { width: 6px; }
+      ::-webkit-scrollbar-track { background: #020617; }
+      ::-webkit-scrollbar-thumb { background: #166534; border-radius: 10px; }
+      .theme-decode ::-webkit-scrollbar-thumb { background: #075985; }
+      ::-webkit-scrollbar-thumb:hover { background: var(--theme-primary); }
+    </style>
+  <script type="importmap">
+{
+  "imports": {
+    "react/": "https://esm.sh/react@^19.2.4/",
+    "react": "https://esm.sh/react@^19.2.4",
+    "@google/genai": "https://esm.sh/@google/genai@^1.41.0",
+    "react-dom/": "https://esm.sh/react-dom@^19.2.4/",
+    "lucide-react": "https://esm.sh/lucide-react@^0.563.0"
+  }
+}
+</script>
+</head>
+  <body class="min-h-screen">
+    <div id="root"></div>
+    <script type="module" src="/index.tsx"></script>
+  </body>
+</html>

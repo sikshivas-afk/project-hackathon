@@ -1,0 +1,7 @@
+{
+  "name": "DEN: Steganographic Defense System",
+  "description": "A next-generation digital defense system for secure information concealment using LSB steganography, AES-256 encryption, and AI-powered security analysis.",
+  "requestFramePermissions": [
+    "camera"
+  ]
+}
